@@ -1,7 +1,7 @@
 <template>
     <v-container fluid>
-        <h1>{{ items[0].snippet.title }}</h1>
-        <p>{{ items[0].snippet.description }}</p>
+        <h1 v-if="items">{{ items[0].snippet.title }}</h1>
+        <p v-if="items">{{ items[0].snippet.description }}</p>
         <v-row no-gutters>
             <v-col cols="12" md="7">
                 <Video :videoID="id"/>
@@ -11,7 +11,8 @@
                     <v-card-title>Rusija</v-card-title>
                     <v-card-subtitle>Videoposnetek</v-card-subtitle>
                     <v-card-actions>
-                        <v-btn :to="{ name: 'country-show', params: { countryID: countryInfo.countryID, countryName: countryInfo.countryName }}">Nazaj</v-btn>
+                        <v-btn v-if="countryName" :to="{ name: 'country-show', params: { countryName: countryName }}">Nazaj</v-btn>
+                        <v-btn v-if="!countryName" :to="{ name: 'Home'}">Nazaj</v-btn>
                     </v-card-actions>
                 </v-card>
             </v-col>
@@ -29,11 +30,11 @@ export default {
     },
     props: {
         id: String,
-        countryInfo: Object
+        countryName: String
     },
     data() {
         return {
-            items: Object
+            items: null
         }
     },
 created() {

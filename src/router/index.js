@@ -13,7 +13,7 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/drzava/:countryID',
+    path: '/drzava/:countryName',
     name: 'country-show',
     component: CountryShow,
     props: true

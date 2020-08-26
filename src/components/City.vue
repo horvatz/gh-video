@@ -9,7 +9,7 @@
             <v-card-actions>
                 <router-link
                     class="video-show"
-                    :to="{ name: 'video-show', params: { id: cityID.contentDetails.videoId, countryInfo: countryInfo } }"
+                    :to="{ name: 'video-show', params: { id: cityID.contentDetails.videoId, countryName: countryName } }"
                 >
                 <v-btn text>
                 Klik
@@ -25,7 +25,7 @@
         name: 'City',
         props: {
             cityID: Object,
-            countryInfo: Object
+            countryName: String
         }
     }
 </script>

@@ -14,7 +14,7 @@
     <v-card-actions>
       <router-link
           class="event-link"
-          :to="{ name: 'country-show', params: { countryName: countryName, countryID: countryID } }"
+          :to="{ name: 'country-show', params: { countryName: countryName } }"
         >
       <v-btn text>
         Klik
