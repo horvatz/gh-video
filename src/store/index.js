@@ -26,10 +26,10 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    getCountryNames: state => {
-      let items = []
+    getCountryNames: state => { // Plus description
+      let items = {}
       state.countries.forEach(country => {
-        items.push(country.snippet.localized.title)
+        items[country.snippet.localized.title] = country.snippet.localized.description
       });
       return items
     },

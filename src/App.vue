@@ -16,9 +16,21 @@
       </v-container>
     </v-main>
 
-    <v-footer app>
-      <!-- -->
-    </v-footer>
+    
+    <v-card height="150" >
+      <v-footer
+        absolute
+        class="font-weight-medium" color="indigo" dark
+      >
+        <v-col
+          class="text-center"
+          cols="12"
+        >
+        {{ new Date().getFullYear() }} — <strong>gezahorvatvideo.com</strong>
+        </v-col>
+      </v-footer>
+    </v-card>
+
   </v-app>
 </template>
 

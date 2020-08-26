@@ -32,14 +32,14 @@ export default {
             
         }
     },
-    created() {        
-        VideoService.getVideoList(this.getCountryId(this.countryName))
+    created() {
+            VideoService.getVideoList(this.getCountryId(this.countryName))
             .then(response => {
                 this.city = response.data.items
-        })
-        .catch(error => {
-            console.log('There was an error:', error.response)
-        })
+            })
+            .catch(error => {
+                console.log('There was an error:', error.response)
+            })    
     },
     computed: mapGetters([
         'getCountryId'

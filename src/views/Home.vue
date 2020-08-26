@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
     <v-row >
-      <v-col v-for="(country, index) in getCountryNames" :key="index">  
-        <Country :countryName="country" />
+      <v-col v-for="(desc, country, index) in getCountryNames" :key="index">  
+        <Country :countryName="country" :countryDesc="desc"/>
       </v-col>
     </v-row>
   </v-container>
@@ -11,7 +11,6 @@
 <script>
 // @ is an alias to /src
 import Country from '@/components/Country.vue'
-import VideoService from '@/services/VideoService.js'
 // import { mapState } from 'vuex'
 import { mapGetters } from 'vuex'
 
@@ -26,13 +25,7 @@ export default {
     }
   },
   created() {
-    VideoService.getCountry()
-      .then(response => {
-        this.items = response.data.items
-      })
-      .catch(error => {
-        console.log('There was an error:', error.response)
-      })
+    
   }, 
   mounted() {
     this.$store.dispatch('addCountries')

@@ -10,7 +10,7 @@
     >
     <v-card-title>{{ countryName }}</v-card-title>
   </v-img>
-    <v-card-text>I'm card text</v-card-text>
+    <v-card-text>{{ countryDesc }}</v-card-text>
     <v-card-actions>
       <router-link
           class="event-link"
@@ -29,7 +29,7 @@
         name: 'Country',
         props: {
           countryName: String,
-          countryID: String
+          countryDesc: String
         }
     }
 </script>
