@@ -1,16 +1,27 @@
 <template>
-    <v-container fluid>
-        <div>
-            <h1>{{ countryName }}</h1>
-            <p>a</p>
-            <v-btn to="/">Nazaj</v-btn>
+    <div>
+        <div class="white--text blue darken-2" id="jumbo">
+        <v-container>
+            <v-row align="center" justify="left">
+                <v-col class="text-left" cols="12">
+                <h1 class="display-1 font-weight-bold mb-4">{{ countryName }}</h1>
+                </v-col>
+            </v-row>
+        </v-container>
         </div>
-        <v-row>
-            <v-col v-for="(mesto, index) in city" :key="index">  
-                <City :cityID="mesto" :countryName="countryName" />
-            </v-col>  
-        </v-row>
-  </v-container>
+        <v-container>
+            <div>
+                <v-btn to="/">
+                <v-icon dark left>mdi-arrow-left</v-icon>Nazaj
+                </v-btn>
+            </div>
+            <v-row>
+                <v-col cols="12" md="4" v-for="(mesto, index) in city" :key="index">  
+                    <City :cityID="mesto" :countryName="countryName" />
+                </v-col>  
+            </v-row>
+    </v-container>
+    </div>
 </template>
 
 <script>
@@ -47,6 +58,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+#jumbo {
+    height: 100px;
+}
 </style>

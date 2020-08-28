@@ -1,26 +1,26 @@
 <template>
   <v-app>
-    <v-app-bar app color="indigo" dark>
+    <v-app-bar app color="blue darken-4" dark>
       <v-container fluid>
-        <router-link to="/" tag="v-toolbar-title">ghvideo</router-link>
+        <router-link to="/" tag="v-toolbar-title">Geza Horvat Video</router-link>
       </v-container>
     </v-app-bar>
     <!-- Sizes your content based upon application components -->
     <v-main>
 
       <!-- Provides the application the proper gutter -->
-      <v-container>
+      
 
         <!-- If using vue-router -->
         <router-view></router-view>
-      </v-container>
+      
     </v-main>
 
     
     <v-card height="150" >
       <v-footer
         absolute
-        class="font-weight-medium" color="indigo" dark
+        class="font-weight-medium" color="blue darken-4" dark
       >
         <v-col
           class="text-center"
@@ -50,6 +50,10 @@ export default {
 
 v-toolbar-title {
   cursor: pointer;
+}
+
+#top {
+  height: 10px;
 }
 
 </style>

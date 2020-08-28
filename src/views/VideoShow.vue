@@ -1,23 +1,37 @@
 <template>
-    <v-container fluid>
-        <h1 v-if="items">{{ items[0].snippet.title }}</h1>
-        <p v-if="items">{{ items[0].snippet.description }}</p>
-        <v-row no-gutters>
-            <v-col cols="12" md="7">
-                <Video :videoID="id"/>
-            </v-col>
-            <v-col cols="12" md="4" offset-md="1">
-                <v-card class="mx-auto">
-                    <v-card-title>Rusija</v-card-title>
-                    <v-card-subtitle>Videoposnetek</v-card-subtitle>
-                    <v-card-actions>
-                        <v-btn v-if="countryName" :to="{ name: 'country-show', params: { countryName: countryName }}">Nazaj</v-btn>
-                        <v-btn v-if="!countryName" :to="{ name: 'Home'}">Nazaj</v-btn>
-                    </v-card-actions>
-                </v-card>
-            </v-col>
-        </v-row>
-    </v-container>
+    <div>
+        <div class="white--text blue darken-2" id="jumbo">
+            <v-container>
+                <v-row align="center" justify="left">
+                    <v-col class="text-left" cols="12">
+                        <h1 v-if="items" class="display-1 font-weight-bold mb-4">{{ items[0].snippet.title }}</h1>
+                        <p v-if="items">{{ items[0].snippet.description }}</p>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </div>
+        <v-container>
+            <v-row no-gutters>
+                <v-col cols="12" md="6">
+                    <Video :videoID="id"/>
+                </v-col>
+                <v-col cols="12" md="5" offset-md="1">
+                    <v-card class="mx-auto">
+                        <v-card-title v-if="countryName">Država: {{ countryName }}</v-card-title>
+                        <v-card-subtitle>Videoposnetek</v-card-subtitle>
+                        <v-card-actions>
+                            <v-btn dark color="orange darken-2" v-if="countryName" :to="{ name: 'country-show', params: { countryName: countryName }}">
+                                <v-icon dark left>mdi-arrow-left</v-icon>Nazaj
+                            </v-btn>
+                            <v-btn dark color="orange darken-2" v-if="!countryName" :to="{ name: 'Home'}">
+                                <v-icon dark left>mdi-arrow-left</v-icon>Nazaj
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+    </div>
 </template>
 
 <script>

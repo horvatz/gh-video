@@ -2,6 +2,7 @@
     <div>
         <v-card
         max-width="344"
+        min-height="265"
         class="mx-auto"
         >
             <v-card-title>{{ cityID.snippet.title }}</v-card-title>
@@ -12,7 +13,7 @@
                     :to="{ name: 'video-show', params: { id: cityID.contentDetails.videoId, countryName: countryName } }"
                 >
                 <v-btn text>
-                Klik
+                Na posnetek
                 </v-btn>
                 </router-link>
             </v-card-actions>

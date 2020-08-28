@@ -12,7 +12,7 @@ const apiClient = axios.create({
 
 export default {
     getCountry() {
-        return apiClient.get("/playlists?part=snippet%2CcontentDetails&channelId=UCaNAZAJLNhPypJIhgCHByiQ&maxResults=25&fields=items", {
+        return apiClient.get("/playlists?part=snippet%2CcontentDetails&channelId=UCaNAZAJLNhPypJIhgCHByiQ&maxResults=40&fields=items", {
             params: {
                 key: apiKey
             }
