@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-parallax dark height="400" src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg">
+    <v-parallax dark height="400" :src="require(`@/assets/Cover.jpg`)">
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
           <h1 class="display-1 font-weight-thin mb-4">Geza Horvat Video</h1>

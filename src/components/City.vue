@@ -1,21 +1,21 @@
 <template>
     <div>
         <v-card
-        max-width="344"
-        min-height="265"
-        class="mx-auto"
+        min-width="344"
+        height="222"
+        dark
+        color="#1f7087"
+        align="center"
+        class="d-flex flex-column"
         >
-            <v-card-title>{{ cityID.snippet.title }}</v-card-title>
+            <v-card-title class="justify-center">{{ cityID.snippet.title }}</v-card-title>
             <v-card-text>{{ cityID.snippet.description }}</v-card-text>
-            <v-card-actions>
-                <router-link
-                    class="video-show"
-                    :to="{ name: 'video-show', params: { id: cityID.contentDetails.videoId, countryName: countryName } }"
-                >
-                <v-btn text>
-                Na posnetek
+            <v-spacer></v-spacer>
+            <v-card-actions class="justify-center buttons">
+                <v-btn :to="{ name: 'video-show', params: { id: cityID.contentDetails.videoId, countryName: countryName } }">
+                    <v-icon dark left>mdi-movie</v-icon>
+                    Na posnetek
                 </v-btn>
-                </router-link>
             </v-card-actions>
         </v-card>
     </div>
@@ -32,5 +32,7 @@
 </script>
 
 <style scoped>
-
+.buttons {
+    margin-bottom: 20px;
+}
 </style>

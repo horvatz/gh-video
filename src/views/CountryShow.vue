@@ -2,7 +2,7 @@
     <div>
         <div class="white--text blue darken-2" id="jumbo">
         <v-container>
-            <v-row align="center" justify="left">
+            <v-row align="center" class="justiy-left">
                 <v-col class="text-left" cols="12">
                 <h1 class="display-1 font-weight-bold mb-4">{{ countryName }}</h1>
                 </v-col>
@@ -11,7 +11,7 @@
         </div>
         <v-container>
             <div>
-                <v-btn to="/">
+                <v-btn dark color="orange darken-2" to="/">
                 <v-icon dark left>mdi-arrow-left</v-icon>Nazaj
                 </v-btn>
             </div>

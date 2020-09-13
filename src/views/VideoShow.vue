@@ -2,7 +2,7 @@
     <div>
         <div class="white--text blue darken-2" id="jumbo">
             <v-container>
-                <v-row align="center" justify="left">
+                <v-row align="center" class="justify-left">
                     <v-col class="text-left" cols="12">
                         <h1 v-if="items" class="display-1 font-weight-bold mb-4">{{ items[0].snippet.title }}</h1>
                         <p v-if="items">{{ items[0].snippet.description }}</p>

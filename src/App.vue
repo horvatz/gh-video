@@ -1,10 +1,71 @@
 <template>
   <v-app>
-    <v-app-bar app color="blue darken-4" dark>
-      <v-container fluid>
-        <router-link to="/" tag="v-toolbar-title">Geza Horvat Video</router-link>
-      </v-container>
+    <v-navigation-drawer
+      v-model="drawer"
+      temporary
+      app
+    >
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title class="title">
+          Geza Horvat Video
+        </v-list-item-title>
+        <v-list-item-subtitle>
+          Popotniški filmi
+        </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+      <v-divider></v-divider>
+      <v-list
+        nav
+        dense
+      >
+          <v-list-item link to="/">
+
+            <v-list-item-icon>
+              <v-icon>mdi-flag</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title>Države</v-list-item-title>
+            </v-list-item-content>
+            
+          </v-list-item>
+
+          <v-list-item link to="About">
+            
+            <v-list-item-icon>
+              <v-icon>mdi-help</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title>O strani</v-list-item-title>
+            </v-list-item-content>
+            
+          </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-app-bar
+      color="blue darken-4"
+      dark
+      app
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <router-link to="/" class="text-decoration-none white--text">
+        <v-toolbar-title >Geza Horvat Video</v-toolbar-title>
+      </router-link>
+
+      <v-spacer></v-spacer>
+
+      <v-btn icon to="/">
+        <v-icon>mdi-flag</v-icon>
+      </v-btn>
+
+      <v-btn icon to="/about">
+        <v-icon>mdi-help</v-icon>
+      </v-btn>
     </v-app-bar>
+   
     <!-- Sizes your content based upon application components -->
     <v-main>
 
@@ -41,19 +102,11 @@ export default {
   },
 
   data: () => ({
-    //
+    drawer: null
   }),
 };
 </script>
 
 <style scoped>
-
-v-toolbar-title {
-  cursor: pointer;
-}
-
-#top {
-  height: 10px;
-}
 
 </style>
