@@ -111,6 +111,11 @@ export default {
   data: () => ({
     drawer: null
   }),
+  watch: {
+    '$route' (to) {
+      document.title = to.meta.title || 'GezaHorvatVideo'
+    }
+  },
 };
 </script>
 

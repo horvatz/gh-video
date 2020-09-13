@@ -11,19 +11,28 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      title: "Domov | GezaHorvatVideo"
+    }
   },
   {
     path: '/drzava/:countryName',
     name: 'country-show',
     component: CountryShow,
-    props: true
+    props: true,
+    meta: {
+      title: "Videposnetki | GezaHorvatVideo"
+    }
   },
   {
     path: '/video/:id',
     name: 'video-show',
     component: VideoShow,
-    props: true
+    props: true,
+    meta: {
+      title: "Videoposnetki | GezaHorvatVideo"
+    }
   },
   {
     path: '/about',
@@ -31,12 +40,18 @@ Vue.use(VueRouter)
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    meta: {
+      title: "O strani | GezaHorvatVideo"
+    }
   },
   {
     path: '/legal',
     name: 'Legal',
-    component: Cookies
+    component: Cookies,
+    meta: {
+      title: "Zasebnost | GezaHorvatVideo"
+    }
   }
 ]
 
