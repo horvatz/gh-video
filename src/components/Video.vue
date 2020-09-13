@@ -1,7 +1,8 @@
 <template>
  <div>
         <v-card class="mx-auto" id="video">
-            <iframe width="660" height="543" :src="yt + videoID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe v-if="cookie" width="660" height="543" :src="yt + videoID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2 class="text-center">Potrebno je sprejeti piškotke!</h2>
         </v-card>
     </div>
 </template>
@@ -15,9 +16,15 @@
         },
         data() {
             return {
-                yt: "https://www.youtube.com/embed/"
+                yt: "https://www.youtube-nocookie.com/embed/",
+                cookie: false
             }
         },
+        mounted() {
+            if (localStorage['cookie:accepted']) {
+                this.cookie = localStorage['cookie:accepted']
+            }
+        }
     }
 </script>
 

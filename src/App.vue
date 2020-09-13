@@ -89,6 +89,11 @@
         >
         {{ new Date().getFullYear() }} — <strong>gezahorvatvideo.com</strong>
         </v-col>
+        <cookie-law v-on:accept="$router.push({ name: 'Home' })" buttonText="Sprejmi">
+          <div slot="message">
+            Za boljše delovanje spletna stran uporablja piškotke. <router-link to="/legal">Več informacij</router-link>
+          </div>
+        </cookie-law>
       </v-footer>
     </v-card>
 
@@ -96,9 +101,11 @@
 </template>
 
 <script>
+import CookieLaw from 'vue-cookie-law'
 export default {
   name: 'App',
   components: {
+    CookieLaw
   },
 
   data: () => ({

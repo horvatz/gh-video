@@ -2,7 +2,7 @@
     <div>
         <v-card
         min-width="344"
-        height="222"
+        height="232"
         dark
         color="#1f7087"
         align="center"
