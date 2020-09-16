@@ -19,7 +19,7 @@ export default {
         });
     },
     getVideoList(id) {
-        return apiClient.get(`/playlistItems?part=snippet%2CcontentDetails&playlistId=${id}&fields=items`, {
+        return apiClient.get(`/playlistItems?part=snippet%2CcontentDetails&maxResults=40&playlistId=${id}&fields=items`, {
             params: {
                 key: apiKey
             }
