@@ -32,7 +32,19 @@
             
           </v-list-item>
 
-          <v-list-item link to="About">
+          <v-list-item link to="/gallery">
+            
+            <v-list-item-icon>
+              <v-icon>mdi-image</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title>Umetniške slike</v-list-item-title>
+            </v-list-item-content>
+            
+          </v-list-item>
+
+          <v-list-item link to="about">
             
             <v-list-item-icon>
               <v-icon>mdi-help</v-icon>
@@ -43,6 +55,7 @@
             </v-list-item-content>
             
           </v-list-item>
+
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
@@ -59,6 +72,10 @@
 
       <v-btn icon to="/">
         <v-icon>mdi-flag</v-icon>
+      </v-btn>
+
+      <v-btn icon to="/gallery">
+        <v-icon>mdi-image</v-icon>
       </v-btn>
 
       <v-btn icon to="/about">

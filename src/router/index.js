@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import CountryShow from '../views/CountryShow.vue'
 import VideoShow from '../views/VideoShow.vue'
 import Cookies from '../views/Cookies.vue'
+import Gallery from '../views/Gallery.vue'
 
 Vue.use(VueRouter)
 
@@ -51,7 +52,15 @@ Vue.use(VueRouter)
     component: Cookies,
     meta: {
       title: "Zasebnost | GezaHorvatVideo"
-    }
+    },
+  },
+  {
+    path: '/gallery',
+    name: 'Gallery',
+    component: Gallery,
+    meta: {
+      title: "Galerija | GezaHorvatVideo"
+    },
   }
 ]
 
