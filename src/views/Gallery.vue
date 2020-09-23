@@ -46,14 +46,14 @@
         <v-container fluid>
           <v-row>
             <v-col
-              v-for="(n, i) in 49"
+              v-for="(n, i) in 45"
               :key="i"
               class="d-flex child-flex"
               cols="4"
             >
               <v-card flat tile class="d-flex">
                 <v-img
-                  :src="require(`@/assets/umetniske/slika${i}.jpg`)"
+                  :src="require(`@/assets/umetniske/slika${n}.jpg`)"
                   aspect-ratio="0.7"
                   class="grey lighten-2"
                 >
