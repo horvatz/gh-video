@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const apiKey = "AIzaSyDsYheDDVfl-7j3Oa4Lt3pGol8D8s4_zo8"
+const apiKey = process.env.VUE_APP_YOUTUBE_KEY
 
 const apiClient = axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3/',
@@ -12,7 +12,7 @@ const apiClient = axios.create({
 
 export default {
     getCountry() {
-        return apiClient.get("/playlists?part=snippet%2CcontentDetails&channelId=UCaNAZAJLNhPypJIhgCHByiQ&maxResults=40&fields=items", {
+        return apiClient.get("/playlists?part=snippet%2CcontentDetails&channelId=UCaNAZAJLNhPypJIhgCHByiQ&maxResults=60&fields=items", {
             params: {
                 key: apiKey
             }
