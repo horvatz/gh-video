@@ -1,4 +1,7 @@
-# gh-video
+# Geza Horvat Video
+Spletna stran s popotniškimi filmi in ostalimi vsebinami ustvarjena z ogrodjem Vue.js.
+
+Link: https://gezahorvatvideo.com/
 
 ## Project setup
 ```
