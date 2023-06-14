@@ -17,3 +17,4 @@ jobs:
           username: "horvatz"
           reponame: "gh-video"
           token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+          cname: "gezahorvatvideo.si"
