@@ -74,7 +74,7 @@
     <v-card height="150">
       <v-footer absolute class="font-weight-medium" color="blue darken-4" dark>
         <v-col class="text-center" cols="12">
-          {{ new Date().getFullYear() }} — <strong>gezahorvatvideo.com</strong>
+          {{ new Date().getFullYear() }} — <strong>gezahorvatvideo.si</strong>
         </v-col>
         <cookie-law
           v-on:accept="$router.push({ name: 'Home' })"
@@ -104,5 +104,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
