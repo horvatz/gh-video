@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "/gh-video/",
+  publicPath: "/",
   transpileDependencies: ["vuetify"],
 };
