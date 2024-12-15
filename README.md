@@ -1,6 +1,6 @@
 # Geza Horvat Video
 
-Spletna stran s popotniškimi filmi in ostalimi vsebinami ustvarjena z ogrodjem Vue.js.
+Spletna stran s popotniškimi filmi in ostalimi vsebinami ustvarjena z ogrodjem Vue.js in Javascript.
 
 Link: https://gezahorvatvideo.si/
 
